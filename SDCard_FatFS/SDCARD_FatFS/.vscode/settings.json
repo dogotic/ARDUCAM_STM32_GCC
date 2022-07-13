@@ -1,0 +1,9 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "stm32-for-vscode.openOCDPath": false,
+    "files.associations": {
+        "usb_device.h": "c",
+        "arducam.h": "c",
+        "delay.h": "c"
+    }
+}

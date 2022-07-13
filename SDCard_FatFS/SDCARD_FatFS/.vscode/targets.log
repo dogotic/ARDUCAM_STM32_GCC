@@ -1,0 +1,1469 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun Jul 10 23:10:37 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from 'Makefile', line 87)
+PREFIX = arm-none-eabi-
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = LXDE
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# makefile (from 'Makefile', line 166)
+LDSCRIPT = STM32F103C8Tx_FLASH.ld
+# environment
+XDG_SESSION_TYPE = x11
+# makefile (from 'Makefile', line 16)
+TARGET = SDCARD_FatFS
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+PLATFORMIO_IDE = 2.5.0
+# makefile (from 'Makefile', line 121)
+AS_DEFS = 
+# makefile (from 'Makefile', line 130)
+AS_INCLUDES = 
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/kaktus/.Xauthority
+# environment
+GDMSESSION = LXDE
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/kaktus/Development/stm32/SDCard_FatFS/SDCARD_FatFS
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 102)
+BIN = $(CP) -O binary -S
+# environment
+GDM_LANG = en_US
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 99)
+SZ = $(PREFIX)size
+# makefile (from 'Makefile', line 159)
+CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections -g -gdwarf-2 -MMD -MP -MF"$(@:%.o=%.d)"
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-LXDE:/etc/xdg
+# makefile (from 'build/usbd_cdc.d', line 1)
+MAKEFILE_LIST :=  Makefile build/stm32f1xx_hal_pwr.d build/stm32f1xx_hal_i2c.d build/startup_stm32f103xb.d build/stm32f1xx_it.d build/stm32f1xx_hal_rcc.d build/stm32f1xx_hal_pcd.d build/usbd_core.d build/ff.d build/usbd_ctlreq.d build/stm32f1xx_hal_tim.d build/stm32f1xx_hal_pcd_ex.d build/system_stm32f1xx.d build/stm32f1xx_hal_gpio.d build/user_diskio.d build/stm32f1xx_hal_msp.d build/usbd_ioreq.d build/delay.d build/stm32f1xx_hal_tim_ex.d build/stm32f1xx_hal_dma.d build/diskio.d build/stm32f1xx_hal_gpio_ex.d build/user_diskio_spi.d build/stm32f1xx_hal_flash_ex.d build/stm32f1xx_hal_exti.d build/syscall.d build/stm32f1xx_hal_flash.d build/fatfs.d build/usbd_cdc_if.d build/usbd_conf.d build/usb_device.d build/stm32f1xx_ll_usb.d build/stm32f1xx_hal_spi.d build/stm32f1xx_hal.d build/main.d build/stm32f1xx_hal_cortex.d build/ArduCAM.d build/stm32f1xx_hal_rcc_ex.d build/ff_gen_drv.d build/usbd_desc.d build/usbd_cdc.d
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 98)
+CP = $(PREFIX)objcopy
+# makefile (from 'Makefile', line 23)
+DEBUG = 1
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile', line 97)
+AS = $(PREFIX)gcc -x assembler-with-cpp
+# environment
+LC_NAME = hr_HR.UTF-8
+# environment
+VSCODE_CWD = /home/kaktus
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+NO_PROXY = 127.0.0.1
+# environment
+_LXSESSION_PID = 1570
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 108)
+CPU = -mcpu=cortex-m3
+# environment
+UBUNTU_MENUPROXY = 1
+# environment
+XDG_MENU_PREFIX = lxde-
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'Makefile', line 171)
+LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/kaktus
+# environment
+XDG_SESSION_DESKTOP = LXDE
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-1v4otFYBX5nT/agent.1570
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 26204
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# makefile (from 'Makefile', line 80)
+ASM_SOURCES = startup_stm32f103xb.s
+# makefile (from 'Makefile', line 25)
+OPT = -Og
+# environment
+PWD = /home/kaktus/Development/stm32/SDCard_FatFS/SDCARD_FatFS
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 1686
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = LXDE
+# environment
+GTK_MODULES = appmenu-gtk-module:gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/kaktus
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/kaktus/.config/Code/CachedData/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
+# environment
+LOGNAME = kaktus
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
++F = $(notdir $+)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 7
+# makefile (from 'Makefile', line 124)
+C_DEFS = -DUSE_HAL_DRIVER -DSTM32F103xB
+# environment
+LC_TIME = hr_HR.UTF-8
+# environment
+PLATFORMIO_PATH = /home/kaktus/.platformio/python3/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/kaktus/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+PATH = /opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/kaktus/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 101)
+HEX = $(CP) -O ihex
+# makefile (from 'Makefile', line 96)
+CC = $(PREFIX)gcc
+# makefile (from 'Makefile', line 32)
+BUILD_DIR = build
+# makefile (from 'Makefile', line 149)
+ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+# environment
+XDG_SESSION_ID = c2
+# environment
+USER = kaktus
+# environment
+LC_MONETARY = hr_HR.UTF-8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = LXDE
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+SAL_USE_VCLPLUGIN = gtk
+# environment
+LC_TELEPHONE = hr_HR.UTF-8
+# default
+MAKE_COMMAND := make
+# makefile (from 'Makefile', line 170)
+LIBDIR = 
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en_US
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-dfbd645e-1.69.0-main.sock
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = hr_HR.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from 'Makefile', line 117)
+MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
+# makefile (from 'Makefile', line 133)
+C_INCLUDES = -IFATFS/Target -IFATFS/App -IUSB_DEVICE/App -IUSB_DEVICE/Target -ICore/Inc -IDrivers/STM32F1xx_HAL_Driver/Inc -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FatFs/src -IMiddlewares/ST/STM32_USB_Device_Library/Core/Inc -IMiddlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IDrivers/CMSIS/Device/ST/STM32F1xx/Include -IDrivers/CMSIS/Include -IARDUCAM/
+# default
+MAKEFILES := 
+# environment
+LC_NUMERIC = hr_HR.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+PLATFORMIO_CALLER = vscode
+# environment
+LC_MEASUREMENT = hr_HR.UTF-8
+# environment
+XDG_CONFIG_HOME = /home/kaktus/.config
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 169)
+LIBS = -lc -lm -lnosys 
+# automatic
+^F = $(notdir $^)
+# environment
+XDG_DATA_HOME = /home/kaktus/.local/share
+# makefile (from 'Makefile', line 38)
+C_SOURCES = Core/Src/main.c Core/Src/delay.c Core/Src/stm32f1xx_it.c Core/Src/stm32f1xx_hal_msp.c FATFS/App/fatfs.c FATFS/Target/user_diskio.c FATFS/Target/user_diskio_spi.c USB_DEVICE/App/usb_device.c USB_DEVICE/App/usbd_desc.c USB_DEVICE/App/usbd_cdc_if.c USB_DEVICE/Target/usbd_conf.c ARDUCAM/ArduCAM.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c Core/Src/system_stm32f1xx.c Middlewares/Third_Party/FatFs/src/diskio.c Middlewares/Third_Party/FatFs/src/ff.c Middlewares/Third_Party/FatFs/src/ff_gen_drv.c Middlewares/Third_Party/FatFs/src/option/syscall.c Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = hr_HR.UTF-8
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 184)
+OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o))) $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.s=.o)))
+# environment
+LC_ADDRESS = hr_HR.UTF-8
+# environment
+LANG = C
+# environment
+VSCODE_PID = 26223
+# variable set hash-table stats:
+# Load=129/1024=13%, Rehash=0, Collisions=21/284=7%
+ 
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# USB_DEVICE/Target (device 2053, inode 5874418): 4 files, no impossibilities.
+# Middlewares/ST/STM32_USB_Device_Library/Core/Src (device 2053, inode 5874450): No files, no impossibilities so far.
+# ARDUCAM (device 2053, inode 5882337): 7 files, no impossibilities.
+# . (device 2053, inode 5874392): 16 files, no impossibilities.
+# Middlewares/Third_Party/FatFs/src/option (device 2053, inode 5874449): No files, no impossibilities so far.
+# FATFS/App (device 2053, inode 5874413): No files, no impossibilities so far.
+# Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src (device 2053, inode 5874451): No files, no impossibilities so far.
+# build (device 2053, inode 5873840): 125 files, no impossibilities.
+# FATFS/Target (device 2053, inode 5874400): No files, no impossibilities so far.
+# Core/Src (device 2053, inode 5874423): No files, no impossibilities so far.
+# Middlewares/Third_Party/FatFs/src (device 2053, inode 5874441): No files, no impossibilities so far.
+# USB_DEVICE/App (device 2053, inode 5874416): 8 files, no impossibilities.
+# Drivers/STM32F1xx_HAL_Driver/Src (device 2053, inode 5874437): No files, no impossibilities so far.
+
+# 160 files, no impossibilities in 13 directories.
+
+# Implicit Rules
+
+build/%.o: %.c Makefile | build
+#  recipe to execute (from 'Makefile', line 188):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+build/%.o: %.s Makefile | build
+#  recipe to execute (from 'Makefile', line 191):
+	$(AS) -c $(CFLAGS) $< -o $@
+
+build/%.hex: build/%.elf | build
+#  recipe to execute (from 'Makefile', line 198):
+	$(HEX) $< $@
+	
+
+build/%.bin: build/%.elf | build
+#  recipe to execute (from 'Makefile', line 201):
+	$(BIN) $< $@	
+	
+
+# 4 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+build/stm32f1xx_hal_gpio_ex.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.392260011
+#  File has been updated.
+#  Successfully updated.
+
+Middlewares/Third_Party/FatFs/src/ff.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+build/usbd_desc.o: USB_DEVICE/App/usbd_desc.c Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h USB_DEVICE/App/usbd_desc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.947067783
+#  File has been updated.
+#  Successfully updated.
+
+build/usb_device.o: USB_DEVICE/App/usb_device.c USB_DEVICE/App/usb_device.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h USB_DEVICE/App/usbd_desc.h Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h USB_DEVICE/App/usbd_cdc_if.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:17.995149779
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/usbd_conf.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.716278603
+#  File has been updated.
+#  Successfully updated.
+
+Middlewares/Third_Party/FatFs/src/option/../integer.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+FATFS/Target/user_diskio.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 23:50:36.205
+#  File has been updated.
+#  Successfully updated.
+
+build/fatfs.o: FATFS/App/fatfs.c FATFS/App/fatfs.h Middlewares/Third_Party/FatFs/src/ff.h Middlewares/Third_Party/FatFs/src/integer.h FATFS/Target/ffconf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/user_diskio.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f1xx_hal_rcc_ex.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.876266807
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_msp.o: Core/Src/stm32f1xx_hal_msp.c Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.939067675
+#  File has been updated.
+#  Successfully updated.
+
+build/main.o: Core/Src/main.c Makefile Core/Src/main.c Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h FATFS/App/fatfs.h Middlewares/Third_Party/FatFs/src/ff.h Middlewares/Third_Party/FatFs/src/integer.h FATFS/Target/ffconf.h Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/user_diskio.h USB_DEVICE/App/usb_device.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h USB_DEVICE/App/usbd_cdc_if.h Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h ARDUCAM/ArduCAM.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-07-10 23:03:39.738483347
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := build/main.o
+# automatic
+# % := 
+# automatic
+# * := main
+# automatic
+# + := Core/Src/main.c Makefile Core/Src/main.c Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h FATFS/App/fatfs.h Middlewares/Third_Party/FatFs/src/ff.h Middlewares/Third_Party/FatFs/src/integer.h FATFS/Target/ffconf.h Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/user_diskio.h USB_DEVICE/App/usb_device.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h USB_DEVICE/App/usbd_cdc_if.h Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h ARDUCAM/ArduCAM.h
+# automatic
+# | := build
+# automatic
+# < := Core/Src/main.c
+# automatic
+# ^ := Core/Src/main.c Makefile Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h FATFS/App/fatfs.h Middlewares/Third_Party/FatFs/src/ff.h Middlewares/Third_Party/FatFs/src/integer.h FATFS/Target/ffconf.h Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/diskio.h FATFS/Target/user_diskio.h USB_DEVICE/App/usb_device.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h USB_DEVICE/App/usbd_cdc_if.h Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h ARDUCAM/ArduCAM.h
+# automatic
+# ? := Core/Src/main.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/26=4%
+#  recipe to execute (from 'Makefile', line 188):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+build/stm32f1xx_hal_gpio.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/CMSIS/Include/cmsis_version.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:18.127151568
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/CMSIS/Include/core_cm3.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:18.123151514
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/user_diskio_spi.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.832280232
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+all: build/SDCARD_FatFS.elf build/SDCARD_FatFS.hex build/SDCARD_FatFS.bin
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/14=0%
+
+USB_DEVICE/App/usb_device.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 23:50:36.537
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.995068434
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/CMSIS/Include/cmsis_gcc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:18.127151568
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/usbd_ioreq.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.736278884
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_rcc.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h:
+ 
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.939067675
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_flash.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.300272762
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/usbd_core.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:16.028282985
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_ll_usb.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:16.184285175
+#  File has been updated.
+#  Successfully updated.
+
+build/usbd_ctlreq.o: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f1xx_hal_exti.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/startup_stm32f103xb.o: startup_stm32f103xb.s
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ARDUCAM/ArduCAM.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+FATFS/Target/user_diskio_spi.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/user_diskio.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.444260741
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.939067675
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.931067566
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:17.991149725
+#  File has been updated.
+#  Successfully updated.
+
+build/syscall.o: Middlewares/Third_Party/FatFs/src/option/syscall.c Middlewares/Third_Party/FatFs/src/option/../ff.h Middlewares/Third_Party/FatFs/src/option/../integer.h FATFS/Target/ffconf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:17.627144791
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/CMSIS/Include/cmsis_compiler.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:18.127151568
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_it.o: Core/Src/stm32f1xx_it.c Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Core/Inc/stm32f1xx_it.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f1xx_hal_tim.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:17.100298038
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_gpio_ex.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Middlewares/Third_Party/FatFs/src/option/syscall.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Core/Inc/stm32f1xx_hal_conf.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:09.579035664
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.931067566
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+USB_DEVICE/Target/usbd_conf.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/usbd_conf.o: USB_DEVICE/Target/usbd_conf.c Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build:
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-10 23:03:39.806484294
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 204):
+	mkdir $@		
+
+ARDUCAM/ArduCAM.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 12:32:12.528823487
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_rcc_ex.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_pwr.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.520275851
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+FATFS/App/fatfs.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/ff.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:17.084297813
+#  File has been updated.
+#  Successfully updated.
+
+build/user_diskio_spi.o: FATFS/Target/user_diskio_spi.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h FATFS/Target/user_diskio_spi.h Middlewares/Third_Party/FatFs/src/integer.h Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/integer.h Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/ffconf.h Core/Inc/main.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+USB_DEVICE/App/usbd_cdc_if.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 23:50:36.909
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f1xx_hal_i2c.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ARDUCAM/ov5642_regs.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+build/diskio.o: Middlewares/Third_Party/FatFs/src/diskio.c Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/integer.h Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/ffconf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/usbd_ioreq.o: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.943067729
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/system_stm32f1xx.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/usbd_core.o: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.93506762
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/system_stm32f1xx.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.656263718
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.931067566
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/ff_gen_drv.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.592276862
+#  File has been updated.
+#  Successfully updated.
+
+USB_DEVICE/App/usbd_desc.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f1xx_ll_usb.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+USB_DEVICE/Target/usbd_conf.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 23:50:36.609
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.93506762
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/usbd_cdc.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:16.032283041
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_dma.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.788279614
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_tim_ex.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:16.276286467
+#  File has been updated.
+#  Successfully updated.
+
+FATFS/App/fatfs.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 23:50:36.365
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/ArduCAM.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.700278379
+#  File has been updated.
+#  Successfully updated.
+
+Core/Inc/delay.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/user_diskio.o: FATFS/Target/user_diskio.c Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/integer.h Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/ffconf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h FATFS/Target/user_diskio_spi.h Middlewares/Third_Party/FatFs/src/integer.h Middlewares/Third_Party/FatFs/src/diskio.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f1xx_hal_pcd_ex.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.016268773
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/usbd_cdc_if.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.528261921
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f1xx_hal_tim.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/fatfs.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.348259393
+#  File has been updated.
+#  Successfully updated.
+
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.947067783
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/delay.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Middlewares/Third_Party/FatFs/src/diskio.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/SDCARD_FatFS.hex:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.939067675
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/delay.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.520261807
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.931067566
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+USB_DEVICE/App/usbd_desc.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:17.995149779
+#  File has been updated.
+#  Successfully updated.
+
+build/ArduCAM.o: ARDUCAM/ArduCAM.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Core/Inc/main.h ARDUCAM/ArduCAM.h ARDUCAM/ov2640_regs.h ARDUCAM/ov5642_regs.h ARDUCAM/ov5640_regs.h Core/Inc/delay.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+build/stm32f1xx_hal_pwr.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f1xx_hal_spi.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:16.324287141
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_pcd.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:16.296286748
+#  File has been updated.
+#  Successfully updated.
+
+Core/Inc/main.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:09.939
+#  File has been updated.
+#  Successfully updated.
+
+build/ff.o: Middlewares/Third_Party/FatFs/src/ff.c Middlewares/Third_Party/FatFs/src/ff.h Middlewares/Third_Party/FatFs/src/integer.h FATFS/Target/ffconf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/Third_Party/FatFs/src/diskio.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/system_stm32f1xx.o: Core/Src/system_stm32f1xx.c Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.943067729
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_flash_ex.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.368273717
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.943067729
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/usbd_desc.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.992268437
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/usb_device.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.312258887
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/stm32f1xx_hal_msp.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.943067729
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 23:04:51.063475943
+#  File has been updated.
+#  Successfully updated.
+
+Middlewares/Third_Party/FatFs/src/diskio.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_flash.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+FATFS/Target/user_diskio_spi.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/ff_gen_drv.o: Middlewares/Third_Party/FatFs/src/ff_gen_drv.c Middlewares/Third_Party/FatFs/src/ff_gen_drv.h Middlewares/Third_Party/FatFs/src/diskio.h Middlewares/Third_Party/FatFs/src/integer.h Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/ffconf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.939067675
+#  File has been updated.
+#  Successfully updated.
+
+ARDUCAM/ov5640_regs.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f1xx_hal_msp.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.876266807
+#  File has been updated.
+#  Successfully updated.
+
+Middlewares/Third_Party/FatFs/src/integer.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.959067946
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/main.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 23:03:39.69848279
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_gpio.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.252272088
+#  File has been updated.
+#  Successfully updated.
+
+build/SDCARD_FatFS.elf: build/main.o build/delay.o build/stm32f1xx_it.o build/stm32f1xx_hal_msp.o build/fatfs.o build/user_diskio.o build/user_diskio_spi.o build/usb_device.o build/usbd_desc.o build/usbd_cdc_if.o build/usbd_conf.o build/ArduCAM.o build/stm32f1xx_hal_gpio_ex.o build/stm32f1xx_hal_pcd.o build/stm32f1xx_hal_pcd_ex.o build/stm32f1xx_ll_usb.o build/stm32f1xx_hal.o build/stm32f1xx_hal_rcc.o build/stm32f1xx_hal_rcc_ex.o build/stm32f1xx_hal_gpio.o build/stm32f1xx_hal_dma.o build/stm32f1xx_hal_cortex.o build/stm32f1xx_hal_pwr.o build/stm32f1xx_hal_flash.o build/stm32f1xx_hal_flash_ex.o build/stm32f1xx_hal_exti.o build/stm32f1xx_hal_spi.o build/stm32f1xx_hal_tim.o build/stm32f1xx_hal_tim_ex.o build/system_stm32f1xx.o build/diskio.o build/ff.o build/ff_gen_drv.o build/syscall.o build/usbd_core.o build/usbd_ctlreq.o build/usbd_ioreq.o build/usbd_cdc.o build/stm32f1xx_hal_i2c.o build/startup_stm32f103xb.o Makefile
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-10 23:03:39.802484238
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/14=0%
+#  recipe to execute (from 'Makefile', line 194):
+	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	$(SZ) $@
+
+# Not a target:
+USB_DEVICE/App/usbd_cdc_if.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/usbd_cdc.o: Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f1xx_hal_dma.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.943067729
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_tim_ex.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f1xx_hal.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.344273379
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+FATFS/Target/ffconf.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 23:50:36.053
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_pcd_ex.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ARDUCAM/ov2640_regs.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f1xx_hal_rcc.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.63627748
+#  File has been updated.
+#  Successfully updated.
+
+build/usbd_cdc_if.o: USB_DEVICE/App/usbd_cdc_if.c USB_DEVICE/App/usbd_cdc_if.h Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.943067729
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_i2c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:17.320301127
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Middlewares/Third_Party/FatFs/src/ff.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Middlewares/Third_Party/FatFs/src/option/../ff.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/SDCARD_FatFS.bin:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Core/Inc/stm32f1xx_it.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/usbd_ctlreq.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:16.216285625
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_exti.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.392274053
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_hal_cortex.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.58427675
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+FATFS/Target/user_diskio.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/startup_stm32f103xb.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.012268717
+#  File has been updated.
+#  Successfully updated.
+
+build/delay.o: Core/Src/delay.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h Core/Inc/delay.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f1xx_hal_cortex.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+startup_stm32f103xb.s:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f1xx_hal_spi.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Middlewares/Third_Party/FatFs/src/ff_gen_drv.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 21:21:11.93506762
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+USB_DEVICE/App/usb_device.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Core/Src/stm32f1xx_it.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 210):
+	-rm -fR $(BUILD_DIR)
+
+# Not a target:
+build/syscall.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.236271863
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_flash_ex.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/diskio.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:15.408274278
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32f1xx_it.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 22:56:14.388259955
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32f1xx_hal_pcd.o: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h Core/Inc/stm32f1xx_hal_conf.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h Drivers/CMSIS/Include/core_cm3.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=184/1024=18%, Rehash=0, Collisions=159/2938=5%
+# VPATH Search Paths
+
+vpath %.c ARDUCAM:Core/Src:Drivers/STM32F1xx_HAL_Driver/Src:FATFS/App:FATFS/Target:Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src:Middlewares/ST/STM32_USB_Device_Library/Core/Src:Middlewares/Third_Party/FatFs/src:Middlewares/Third_Party/FatFs/src/option:USB_DEVICE/App:USB_DEVICE/Target
+
+# 1 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 2 (0) / strings = 353 / storage = 8847 B / avg = 25 B
+# current buf: size = 8162 B / used = 710 B / count = 25 / avg = 28 B
+# other used: total = 8137 B / count = 328 / avg = 24 B
+# other free: total = 25 B / max = 25 B / min = 25 B / avg = 25 B
+
+# strcache performance: lookups = 4311 / hit rate = 91%
+# hash-table stats:
+# Load=353/8192=4%, Rehash=0, Collisions=131/4311=3%
+# Finished Make data base on Sun Jul 10 23:10:37 2022
+
+ 
