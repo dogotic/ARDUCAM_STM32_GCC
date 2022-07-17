@@ -53,6 +53,7 @@ TIM_HandleTypeDef htim1;
 
 UART_HandleTypeDef huart1;
 
+
 /* USER CODE BEGIN PV */
 char buf[2048] = {0};
 /* USER CODE END PV */
@@ -76,9 +77,9 @@ static void MX_USART1_UART_Init(void);
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -103,7 +104,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DMA_Init();
+  //MX_DMA_Init();
   MX_SPI2_Init();
   MX_FATFS_Init();
   MX_USB_DEVICE_Init();
@@ -220,26 +221,29 @@ int main(void)
   f_close(&fil);
 
   // We're done, so de-mount the drive
-  f_mount(NULL, "", 0);
+  // f_mount(NULL, "", 0);
+  FIL image;
+  f_open(&image,"image.jpg",FA_WRITE | FA_OPEN_ALWAYS | FA_CREATE_ALWAYS);
 
   ArduCAM_CS_init();
 
-  uint8_t vid, pid, temp;
+  uint8_t vid, pid;
   uint8_t Camera_WorkMode = 0;
   uint8_t start_shoot = 0;
   uint8_t stop = 0;
 
-  while(1)
+  while (1)
   {
     CS_LOW();
     uint8_t tx_data[2] = {0x80 | ARDUCHIP_TEST1, 0x55};
     uint8_t rx_data = 0x00;
-    HAL_SPI_Transmit(&hspi1,tx_data,2,100);
-    HAL_SPI_Receive(&hspi1,&rx_data,1,100);
+    HAL_SPI_Transmit(&hspi1, tx_data, 2, 100);
+    HAL_SPI_Receive(&hspi1, &rx_data, 1, 100);
     CS_HIGH();
-    if (rx_data == 0x55) break;
+    if (rx_data == 0x55)
+      break;
   }
-  HAL_UART_Transmit(&huart1,"SPI OK\r\n", strlen("SPI OK\r\n"),100);
+  HAL_UART_Transmit(&huart1, "SPI OK\r\n", strlen("SPI OK\r\n"), 100);
 
   while (1)
   {
@@ -250,7 +254,7 @@ int main(void)
     if ((vid != 0x26) && ((pid != 0x41) || (pid != 0x42)))
     {
       sprintf(buf, "ACK CMD Can't find OV2640 module!\r\n");
-      //HAL_UART_Transmit(&huart1, buf, strlen(buf), 50);
+      // HAL_UART_Transmit(&huart1, buf, strlen(buf), 50);
     }
     else
     {
@@ -296,23 +300,45 @@ int main(void)
     }
   }
   // Support OV2640/OV5640/OV5642 Init
+  set_format(JPEG);
+
   ArduCAM_Init(sensor_model);
+  HAL_UART_Transmit(&huart1, buf, strlen(buf), 50);
+  clear_fifo_flag();
+  write_reg(ARDUCHIP_FRAMES,0);
 
+  flush_fifo();
+  clear_fifo_flag();
   OV2640_set_JPEG_size(OV2640_1600x1200);
-  sprintf(buf,"ACK CMD switch to OV2640_1600x1200\r\n");
-  HAL_UART_Transmit(&huart1,buf,strlen(buf),50);
+  start_capture();
+  while (!get_bit(ARDUCHIP_TRIG, CAP_DONE_MASK))
+  {
+    ;
+  }
+  int length = read_fifo_length();
 
-	flush_fifo();
-	clear_fifo_flag();
-	start_capture(); 
-	while(!get_bit(ARDUCHIP_TRIG , CAP_DONE_MASK)){;}
-	sprintf(buf,"ACK CMD capture done\r\n");
-  HAL_UART_Transmit(&huart1,buf,strlen(buf),50);  
-	int length= read_fifo_length();
-  sprintf(buf,"length read from fifo  = %d\r\n",length);
-  HAL_UART_Transmit(&huart1,buf,strlen(buf),50);
+  uint8_t tx_data = 0x80;
+  uint8_t rx_data = 0x00;
+  uint8_t rx_data_prev = 0x00;
 
   /* USER CODE END 2 */
+
+  for (int i=0; i<length; i++)
+  {
+    rx_data_prev  = rx_data;
+    rx_data = read_fifo();
+    uint8_t bytes_written = 0;
+    /*
+    if ((rx_data == 0xd9) && (rx_data_prev == 0xFF))
+    {
+      sprintf(buf,"0x%02X\r\n",rx_data);
+      HAL_UART_Transmit(&huart1,buf,strlen(buf),100);
+    }
+    */
+    f_write(&image,&rx_data,1,&bytes_written);
+  }
+  f_close(&image);
+  f_mount(NULL, "", 0);
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -320,16 +346,16 @@ int main(void)
   {
     /* USER CODE END WHILE */
     HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
-    HAL_Delay(200);
+    HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -337,8 +363,8 @@ void SystemClock_Config(void)
   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
+   * in the RCC_OscInitTypeDef structure.
+   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
@@ -352,9 +378,8 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+   */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
@@ -373,10 +398,10 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief I2C1 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief I2C1 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_I2C1_Init(void)
 {
 
@@ -403,14 +428,13 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
-
 }
 
 /**
-  * @brief SPI1 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief SPI1 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_SPI1_Init(void)
 {
 
@@ -429,7 +453,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -441,14 +465,13 @@ static void MX_SPI1_Init(void)
   /* USER CODE BEGIN SPI1_Init 2 */
 
   /* USER CODE END SPI1_Init 2 */
-
 }
 
 /**
-  * @brief SPI2 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief SPI2 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_SPI2_Init(void)
 {
 
@@ -479,14 +502,13 @@ static void MX_SPI2_Init(void)
   /* USER CODE BEGIN SPI2_Init 2 */
 
   /* USER CODE END SPI2_Init 2 */
-
 }
 
 /**
-  * @brief TIM1 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief TIM1 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_TIM1_Init(void)
 {
 
@@ -501,9 +523,9 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 72-1;
+  htim1.Init.Prescaler = 72 - 1;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535-1;
+  htim1.Init.Period = 65535 - 1;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -525,14 +547,13 @@ static void MX_TIM1_Init(void)
   /* USER CODE BEGIN TIM1_Init 2 */
 
   /* USER CODE END TIM1_Init 2 */
-
 }
 
 /**
-  * @brief USART1 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief USART1 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_USART1_UART_Init(void)
 {
 
@@ -558,12 +579,11 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
-
 }
 
 /**
-  * Enable DMA controller clock
-  */
+ * Enable DMA controller clock
+ */
 static void MX_DMA_Init(void)
 {
 
@@ -574,14 +594,13 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
-
 }
 
 /**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief GPIO Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -596,7 +615,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, CAMERA_CS_Pin|SD_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, CAMERA_CS_Pin | SD_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : TEST_LED_Pin */
   GPIO_InitStruct.Pin = TEST_LED_Pin;
@@ -606,12 +625,11 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(TEST_LED_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : CAMERA_CS_Pin SD_CS_Pin */
-  GPIO_InitStruct.Pin = CAMERA_CS_Pin|SD_CS_Pin;
+  GPIO_InitStruct.Pin = CAMERA_CS_Pin | SD_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
@@ -619,9 +637,9 @@ static void MX_GPIO_Init(void)
 /* USER CODE END 4 */
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -633,14 +651,21 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef * hspi)
+{
+    // RX Done .. Do Something ...
+    sprintf(buf,"%s called\r\n",__FUNCTION__);
+    HAL_UART_Transmit(&huart1,buf,strlen(buf),50);
+}
+
+#ifdef USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
