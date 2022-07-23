@@ -162,6 +162,16 @@ struct sensor_reg {
 };
 #endif
 
+typedef enum light_mode_t
+{
+	LIGHT_MODE_Auto,
+	LIGHT_MODE_Sunny,
+	LIGHT_MODE_Cloudy,
+	LIGHT_MODE_Office,
+	LIGHT_MODE_Home,
+
+} light_mode_t;
+
 void ArduCAM_Init(byte model );
 void ArduCAM_CS_init(void);
 void ArduCAM_LED_init(void);
@@ -172,7 +182,7 @@ void OV2640_set_JPEG_size(uint8_t size);
 void OV5642_set_JPEG_size(uint8_t size);
 void OV5640_set_JPEG_size(uint8_t size);
 void set_format(byte fmt);
-
+void OV264_set_light_mode(light_mode_t mode);
 
 void flush_fifo(void);
 void start_capture(void);

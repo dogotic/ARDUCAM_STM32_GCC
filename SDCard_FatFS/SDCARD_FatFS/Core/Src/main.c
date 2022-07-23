@@ -50,9 +50,9 @@ DMA_HandleTypeDef hdma_spi1_rx;
 TIM_HandleTypeDef htim1;
 UART_HandleTypeDef huart1;
 
-
 /* USER CODE BEGIN PV */
 char buf[2048] = {0};
+int cntr = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,20 +73,16 @@ char buf[2048] = {0};
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
+  uint8_t rx, rx_prev;
+  FATFS FatFs;  // Fatfs handle
+  FRESULT fres; // Result after operations
+  FIL image;
 
   /* MCU Configuration--------------------------------------------------------*/
   hw_init();
 
   /* USER CODE BEGIN 2 */
-  sprintf(buf, "\r\n~ SD card demo by kiwih ~\r\n\r\n");
-  HAL_UART_Transmit(&huart1, buf, strlen(buf), 50);
-  HAL_Delay(50); // a short delay is important to let the SD card settle
-
-  // some variables for FatFs
-  FATFS FatFs;  // Fatfs handle
-  FRESULT fres; // Result after operations
+  HAL_Delay(500); // a short delay is important to let the SD card settle
 
   // Open the file system
   fres = f_mount(&FatFs, "", 1); // 1=mount now
@@ -108,8 +104,6 @@ int main(void)
   {
     sprintf(buf, "f_getfree error (%i)\r\n", fres);
     HAL_UART_Transmit(&huart1, buf, strlen(buf), 50);
-    while (1)
-      ;
   }
 
   // Formula comes from ChaN's documentation
@@ -118,13 +112,6 @@ int main(void)
 
   sprintf(buf, "SD card stats:\r\n%10lu KiB total drive space.\r\n%10lu KiB available.\r\n", total_sectors / 2, free_sectors / 2);
   HAL_UART_Transmit(&huart1, buf, strlen(buf), 50);
-
-  // We're done, so de-mount the drive
-  // f_mount(NULL, "", 0);
-  FIL image;
-  f_open(&image,"image.jpg",FA_WRITE | FA_OPEN_ALWAYS | FA_CREATE_ALWAYS);
-
-  ArduCAM_CS_init();
 
   uint8_t vid, pid;
   uint8_t Camera_WorkMode = 0;
@@ -198,55 +185,65 @@ int main(void)
       break;
     }
   }
-  // Support OV2640/OV5640/OV5642 Init
+
+  bool start_writing = false;
+
   set_format(JPEG);
-
   ArduCAM_Init(sensor_model);
-  HAL_UART_Transmit(&huart1, buf, strlen(buf), 50);
   clear_fifo_flag();
-  write_reg(ARDUCHIP_FRAMES,0);
-
-  flush_fifo();
-  clear_fifo_flag();
-  OV2640_set_JPEG_size(OV2640_1600x1200);
-  start_capture();
-  while (!get_bit(ARDUCHIP_TRIG, CAP_DONE_MASK))
-  {
-    ;
-  }
-  int length = read_fifo_length();
-
-  uint8_t tx_data = 0x80;
-  uint8_t rx_data = 0x00;
-  uint8_t rx_data_prev = 0x00;
-
-  /* USER CODE END 2 */
-
-  for (int i=0; i<length; i++)
-  {
-    rx_data_prev  = rx_data;
-    rx_data = read_fifo();
-    uint8_t bytes_written = 0;
-    /*
-    if ((rx_data == 0xd9) && (rx_data_prev == 0xFF))
-    {
-      sprintf(buf,"0x%02X\r\n",rx_data);
-      HAL_UART_Transmit(&huart1,buf,strlen(buf),100);
-    }
-    */
-    f_write(&image,&rx_data,1,&bytes_written);
-  }
-  f_close(&image);
-  f_mount(NULL, "", 0);
+  write_reg(ARDUCHIP_FRAMES, 0);
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-    HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
-    HAL_Delay(100);
-    /* USER CODE BEGIN 3 */
+    flush_fifo();
+    clear_fifo_flag();
+    OV2640_set_JPEG_size(OV2640_1600x1200);
+    OV264_set_light_mode(LIGHT_MODE_Auto);
+    start_capture();
+    while (!get_bit(ARDUCHIP_TRIG, CAP_DONE_MASK))
+    {
+      ;
+    }
+    int length = read_fifo_length();
+
+    for (int i = 0; i < length; i++)
+    {
+      uint8_t bytes_written = 0;
+      rx_prev = rx;
+      rx = read_fifo();
+      if ((rx_prev == 0xFF) && (rx == 0xD8))
+      {
+        HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
+        sprintf(buf, "image_%d.jpg", cntr);
+        f_open(&image, buf, FA_WRITE | FA_OPEN_ALWAYS | FA_CREATE_ALWAYS);
+        start_writing = true;
+        cntr++;
+
+        sprintf(buf, "START OF FILE DETECTED\r\n");
+        HAL_UART_Transmit(&huart1, buf, strlen(buf), 100);
+
+        f_write(&image, &rx_prev, 1, &bytes_written);
+        f_write(&image, &rx, 1, &bytes_written);
+      }
+      if ((rx_prev == 0xFF) && (rx == 0xD9))
+      {
+        sprintf(buf, "END OF FILE DETECTED\r\n\r\n");
+        HAL_UART_Transmit(&huart1, buf, strlen(buf), 100);
+        f_write(&image, &rx_prev, 1, &bytes_written);
+        f_write(&image, &rx, 1, &bytes_written);
+        f_close(&image);
+        start_writing = false;
+        HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
+      }
+
+      if (start_writing)
+      {
+        f_write(&image, &rx, 1, &bytes_written);
+      }
+    }
+    HAL_Delay(60000);
   }
-  /* USER CODE END 3 */
+  f_mount(NULL, "", 0);
 }

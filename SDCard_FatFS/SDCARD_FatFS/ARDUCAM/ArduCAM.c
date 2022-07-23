@@ -367,64 +367,10 @@ byte wrSensorReg8_8(int regID, int regDat)
 	uint8_t data[2] = {regID,regDat};
 	HAL_I2C_Master_Transmit(&CAMERA_I2C_HANDLE,sensor_addr,data,2,100);
 	return 0;
-	/*
-	delay_us(5);
-	sccb_bus_start();
-	if (sccb_bus_write_byte(sensor_addr) == 0)
-	{
-		sccb_bus_stop();
-		return 1;
-	}
-	delay_us(5);
-	if (sccb_bus_write_byte(regID) == 0)
-	{
-		sccb_bus_stop();
-		return 2;
-	}
-	delay_us(5);
-	if (sccb_bus_write_byte(regDat) == 0)
-	{
-		sccb_bus_stop();
-		return 3;
-	}
-	sccb_bus_stop();
-	return 0;
-	*/
 }
 
 byte rdSensorReg8_8(uint8_t regID, uint8_t *regDat)
 {
-	/*
-	delay_us(10);
-
-	sccb_bus_start();
-	if (sccb_bus_write_byte(sensor_addr) == 0)
-	{
-		sccb_bus_stop();
-		// goto start;
-		return 1;
-	}
-	delay_us(10);
-	if (sccb_bus_write_byte(regID) == 0) // ID
-	{
-		sccb_bus_stop();
-		// goto start;
-		return 2;
-	}
-	sccb_bus_stop();
-	delay_us(10);
-	sccb_bus_start();
-	if (sccb_bus_write_byte(sensor_addr | 0x01) == 0)
-	{
-		sccb_bus_stop();
-		// goto start;
-		return 3;
-	}
-	delay_us(10);
-	*regDat = sccb_bus_read_byte();
-	sccb_bus_send_noack();
-	sccb_bus_stop();
-	*/
 	HAL_I2C_Master_Transmit(&CAMERA_I2C_HANDLE,sensor_addr,&regID,1,100);
 	HAL_I2C_Master_Receive(&CAMERA_I2C_HANDLE,sensor_addr,regDat,1,100);
 	return 0;
@@ -452,33 +398,6 @@ int wrSensorRegs8_8(const struct sensor_reg reglist[])
 byte wrSensorReg16_8(int regID, int regDat)
 {
 	uint8_t tx_data[3] = {regID,regID >> 8, regDat};
-	/*
-	sccb_bus_start();
-	if (0 == sccb_bus_write_byte(sensor_addr))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	delay_us(5);
-	if (0 == sccb_bus_write_byte(regID >> 8))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	delay_us(5);
-	if (0 == sccb_bus_write_byte(regID))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	delay_us(5);
-	if (0 == sccb_bus_write_byte(regDat))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	sccb_bus_stop();
-	*/
 	HAL_I2C_Master_Transmit(&CAMERA_I2C_HANDLE,sensor_addr,tx_data,3,100);
 
 	return (1);
@@ -508,42 +427,49 @@ byte rdSensorReg16_8(uint16_t regID, uint8_t *regDat)
 	uint8_t txdata[2] = {regID >> 8,regID};
 	HAL_I2C_Master_Transmit(&CAMERA_I2C_HANDLE,sensor_addr,txdata,2,100);
 	HAL_I2C_Master_Receive(&CAMERA_I2C_HANDLE,sensor_addr,regDat,1,100);
-	/*
-	sccb_bus_start();
-	if (0 == sccb_bus_write_byte(0x78))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	delay_us(20);
-	delay_us(20);
-	if (0 == sccb_bus_write_byte(regID >> 8))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	delay_us(20);
-	if (0 == sccb_bus_write_byte(regID))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	delay_us(20);
-	sccb_bus_stop();
-
-	delay_us(20);
-
-	sccb_bus_start();
-	if (0 == sccb_bus_write_byte(0x79))
-	{
-		sccb_bus_stop();
-		return (0);
-	}
-	delay_us(20);
-	*regDat = sccb_bus_read_byte();
-	sccb_bus_send_noack();
-	sccb_bus_stop();
-	*/
-
 	return (1);
+}
+
+void OV264_set_light_mode(light_mode_t mode)
+{
+	switch (mode)
+	{
+
+	case LIGHT_MODE_Auto:
+		wrSensorReg8_8(0xff, 0x00);
+		wrSensorReg8_8(0xc7, 0x00); // AWB on
+		break;
+	case LIGHT_MODE_Sunny:
+		wrSensorReg8_8(0xff, 0x00);
+		wrSensorReg8_8(0xc7, 0x40); // AWB off
+		wrSensorReg8_8(0xcc, 0x5e);
+		wrSensorReg8_8(0xcd, 0x41);
+		wrSensorReg8_8(0xce, 0x54);
+		break;
+	case LIGHT_MODE_Cloudy:
+		wrSensorReg8_8(0xff, 0x00);
+		wrSensorReg8_8(0xc7, 0x40); // AWB off
+		wrSensorReg8_8(0xcc, 0x65);
+		wrSensorReg8_8(0xcd, 0x41);
+		wrSensorReg8_8(0xce, 0x4f);
+		break;
+	case LIGHT_MODE_Office:
+		wrSensorReg8_8(0xff, 0x00);
+		wrSensorReg8_8(0xc7, 0x40); // AWB off
+		wrSensorReg8_8(0xcc, 0x52);
+		wrSensorReg8_8(0xcd, 0x41);
+		wrSensorReg8_8(0xce, 0x66);
+		break;
+	case LIGHT_MODE_Home:
+		wrSensorReg8_8(0xff, 0x00);
+		wrSensorReg8_8(0xc7, 0x40); // AWB off
+		wrSensorReg8_8(0xcc, 0x42);
+		wrSensorReg8_8(0xcd, 0x3f);
+		wrSensorReg8_8(0xce, 0x71);
+		break;
+	default:
+		wrSensorReg8_8(0xff, 0x00);
+		wrSensorReg8_8(0xc7, 0x00); // AWB on
+		break;
+	}
 }
